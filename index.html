@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Tiradera Records</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Tiradera Records · Colectivo de productores y artista independiente desde Puerto Rico.">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background-color: #ffffff;
+      color: #000000;
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .page {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 24px 16px 48px;
+    }
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+    
+    .logo img {
+      max-width: 280px; 
+      height: auto;
+      display: block;
+    }
+    
+    nav {
+      display: flex;
+      gap: 20px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    nav a {
+      opacity: 1;
+      border-bottom: 2px solid transparent;
+    }
+    nav a:hover {
+      text-decoration: none;
+      border-bottom: 2px solid #000;
+    }
+
+    .hero {
+      margin-bottom: 50px;
+    }
+    .hero p {
+      max-width: 600px;
+      font-size: 1.1rem;
+      font-weight: 500;
+    }
+
+    .section-title {
+      font-size: 1.2rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      border-bottom: 3px solid #000;
+      display: inline-block;
+      margin: 40px 0 24px;
+      padding-bottom: 4px;
+    }
+
+    .releases {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+    .release-card {
+      border: 2px solid #000;
+      border-radius: 0px; 
+      padding: 20px;
+      background: #fff;
+      transition: transform 0.2s ease;
+    }
+    .release-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 4px 4px 0px #000;
+    }
+    
+    .release-title {
+      font-size: 1.1rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+    .release-artist {
+      font-size: 0.95rem;
+      font-weight: 500;
+      margin-bottom: 16px;
+      color: #444;
+    }
+    .release-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 0.85rem;
+      font-weight: 700;
+    }
+    .pill-link {
+      display: inline-block;
+      padding: 6px 16px;
+      background: #000;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border: 1px solid #000;
+      border-radius: 0px;
+    }
+    .pill-link:hover {
+      background: #fff;
+      color: #000;
+      text-decoration: none;
+    }
+
+    .grid-two {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+    @media (max-width: 720px) {
+      .grid-two {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .credits-list {
+      list-style: none;
+      font-size: 1rem;
+    }
+    .credits-list li {
+      margin-bottom: 10px;
+      border-left: 4px solid #000;
+      padding-left: 12px;
+    }
+
+    .socials, .artist-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 32px;
+    }
+    .socials a, .artist-links a {
+      padding: 8px 16px;
+      border: 2px solid #000;
+      color: #000;
+      text-transform: uppercase;
+    }
+    .socials a:hover, .artist-links a:hover {
+        background: #000;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    footer {
+      border-top: 4px solid #000;
+      padding-top: 24px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="logo">
+        <img src="logo.png" alt="Tiradera Records Logo">
+      </div>
+      <nav>
+        <a href="#releases">Lanzamientos</a>
+        <a href="#equipo">Equipo</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <p>
+        Tiradera Records somos nosotros trabajando. Un grupo de creativos dedicados a la producción y el arte. 
+        Aquí es donde vive todo lo que creamos.
+      </p>
+    </section>
+
+    <section id="releases">
+      <h2 class="section-title">Lanzamientos</h2>
+
+      <div class="releases">
+        
+        <div class="release-card">
+          <div class="release-title">Mírame a los ojos</div>
+          <div class="release-artist">Túkorã x Vallentxxno</div>
+          <div class="release-links">
+            <a class="pill-link"
+               href="https://open.spotify.com/track/1hLqtVC7AKQbOieMYKrRht?si=8aa97060c04b4926"
+               target="_blank" rel="noopener">
+              Spotify
+            </a>
+            <a class="pill-link"
+               href="https://youtu.be/S8TbGue0j0g?si=bDDeWWD1BZbwK93l"
+               target="_blank" rel="noopener">
+              YouTube
+            </a>
+          </div>
+        </div>
+
+        <div class="release-card">
+          <div class="release-title">¿Otro?</div>
+          <div class="release-artist">Túkorã x Vallentxxno</div>
+          <div class="release-links">
+            <a class="pill-link"
+               href="https://open.spotify.com/track/4FibQQwTJ1ggBMxp9dib8r?si=5f3e9f8691314cf2"
+               target="_blank" rel="noopener">
+              Spotify
+            </a>
+            <a class="pill-link"
+               href="https://youtu.be/qZRw64K2m-w"
+               target="_blank" rel="noopener">
+              YouTube
+            </a>
+          </div>
+        </div>
+
+        <div class="release-card">
+          <div class="release-title">Solo</div>
+          <div class="release-artist">Túkorã x Vallentxxno</div>
+          <div class="release-links">
+            <a class="pill-link"
+               href="https://open.spotify.com/track/02qevIDyQd1ypt2FghHCuB?si=4dbb3324c74241ff"
+               target="_blank" rel="noopener">
+              Spotify
+            </a>
+            <a class="pill-link"
+               href="https://youtu.be/4UOO7u88zu8"
+               target="_blank" rel="noopener">
+              YouTube
+            </a>
+          </div>
+        </div>
+
+        <div class="release-card">
+          <div class="release-title">¿Si?, ¿No?</div>
+          <div class="release-artist">Túkorã x LXNSI</div>
+          <div class="release-links">
+            <a class="pill-link"
+               href="https://open.spotify.com/track/2ZFVItEIBLhKLxrBgYW1Sr?si=b58625562de84c39"
+               target="_blank" rel="noopener">
+              Spotify
+            </a>
+            <a class="pill-link"
+               href="https://youtu.be/BRN26EVjgQA"
+               target="_blank" rel="noopener">
+              YouTube
+            </a>
+          </div>
+        </div>
+
+        <div class="release-card">
+          <div class="release-title">INTOXICA2</div>
+          <div class="release-artist">DTONSON x Vallentxxno</div>
+          <div class="release-links">
+            <a class="pill-link"
+               href="https://open.spotify.com/track/6LLNtyFXTH5clndWMLqMw1?si=1231f1b536fe4153"
+               target="_blank" rel="noopener">
+              Spotify
+            </a>
+            <a class="pill-link"
+               href="https://www.youtube.com/watch?v=1uktOxTQYig"
+               target="_blank" rel="noopener">
+              YouTube
+            </a>
+          </div>
+        </div>
+
+        <div class="release-card">
+          <div class="release-title">2face (heads)</div>
+          <div class="release-artist">LXNSI x Vallentxxno</div>
+          <div class="release-links">
+            <a class="pill-link"
+               href="https://open.spotify.com/track/0xPyyrE0z9S40W2xOKBgbr?si=3faf021c80494002"
+               target="_blank" rel="noopener">
+              Spotify
+            </a>
+            <a class="pill-link"
+               href="https://www.youtube.com/watch?v=90bv7zb4E0M"
+               target="_blank" rel="noopener">
+              YouTube
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="equipo" class="grid-two">
+      <div>
+        <h2 class="section-title">Equipo</h2>
+        <ul class="credits-list">
+          <li><strong>Túkorã</strong> – Artista / Productor</li>
+          <li><strong>Vallentxxno</strong> – Productor / Mezcla</li>
+        </ul>
+
+        <h3 class="section-title" style="margin-top:32px; font-size:1rem;">Túkorã</h3>
+        <div class="artist-links">
+          <a href="https://open.spotify.com/artist/0vXK3WA6f2jXdMxpVz3vxe?si=UG3h087nTsykjkZv9shOmQ"
+             target="_blank" rel="noopener">
+            Spotify
+          </a>
+          <a href="https://www.youtube.com/@T%C3%BAkor%C3%A34"
+             target="_blank" rel="noopener">
+            YouTube
+          </a>
+        </div>
+
+        <h3 class="section-title" style="margin-top:32px; font-size:1rem;">Vallentxxno</h3>
+        <div class="artist-links">
+          <a href="https://www.instagram.com/vallentxxno/"
+             target="_blank" rel="noopener">
+            Instagram
+          </a>
+          <a href="https://www.youtube.com/@Vallentxxno"
+             target="_blank" rel="noopener">
+            YouTube
+          </a>
+        </div>
+      </div>
+      
+      <div>
+        <h2 class="section-title">Conecta</h2>
+        <div class="socials">
+          <a href="https://www.instagram.com/tiradera_records_/" target="_blank" rel="noopener">
+            @tiradera_records_
+          </a>
+          <a href="https://www.instagram.com/tukorapr/" target="_blank" rel="noopener">
+            @tukorapr
+          </a>
+          <a href="https://www.instagram.com/vallentxxno/" target="_blank" rel="noopener">
+            @vallentxxno
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto">
+      <h2 class="section-title">Contacto</h2>
+      <p style="font-weight: 500; margin-bottom:8px;">
+        General / sesiones:  
+        <a style="text-decoration:underline;" href="mailto:tiraderaessions@gmail.com">tiraderaessions@gmail.com</a>
+      </p>
+      <p style="font-weight: 500;">
+        Booking, prensa y negocios:  
+        <a style="text-decoration:underline;" href="mailto:sessions@tiraderarecords.com">sessions@tiraderarecords.com</a>
+      </p>
+    </section>
+
+    <footer>
+      <span>© <span id="year"></span> Tiradera Records.</span>
+      <span>Puerto Rico</span>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
